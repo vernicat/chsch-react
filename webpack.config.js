@@ -12,7 +12,11 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ['babel-loader']
+      },
+      { 
+        test: /\.pug$/,
+        use: ['pug-loader']
       },
       {
         test: /\.styl$/,
@@ -28,12 +32,12 @@ module.exports = {
           'style-loader',
           'css-loader',
         ],
-      },
+      }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html"
+      template: "./src/index.pug"
     })
   ]
 };
