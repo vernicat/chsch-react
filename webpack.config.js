@@ -12,7 +12,12 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            configFile: path.resolve(__dirname, 'babel.config.json'),
+          },
+        }
       },
       { 
         test: /\.pug$/,
@@ -27,17 +32,29 @@ module.exports = {
         ],
       },
       {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',
           'css-loader',
         ],
-      }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.pug"
+      template: "./src/pages/index.pug"
     })
   ]
 };
