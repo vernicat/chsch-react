@@ -1,0 +1,35 @@
+//- include ../footer/footer
+
+mixin header()
+  header.header
+    .container
+      p.header-logo.grid__column_size_3 chsch
+
+      .grid__column_size_3
+        a.header-sub.circle-sub.grid(href="/") записаться
+
+      nav.header-nav.grid__column_size_3
+          .header-nav-link
+            a(href="/") О нас
+          .header-nav-link
+            a(href="/") Курс
+          .header-nav-link_active
+            .header-nav-link_active-line
+            a(href="/") Формат
+          .header-nav-link
+            a(href="/") Записаться
+
+      //- a.header-menu-link(href="javascript:void(0);", tabindex="1") Меню
+
+      //- .header-menu
+      //-   .header
+      //-     p.header-logo chsch
+
+      //-     a.header-menu-chancel(href="/") Назад
+
+      //-     nav.header-nav
+      //-       a.header-nav-link(href="/") О нас
+      //-       a.header-nav-link(href="/") Курс
+      //-       a.header-nav-link_active(href="/") Формат
+      //-       .line
+      //-   +footer

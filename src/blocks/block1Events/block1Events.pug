@@ -1,0 +1,18 @@
+mixin block1Events()
+    -
+        events = [
+            { "title": "событие", "text": "Информация о том, что скоро состоится конференция." }, 
+            { "title": "курс",    "text": "Скоро релиз нового курса на тему маркетинга или дизайна." }, 
+            { "title": "вебинар", "text": "Скоро состоится вебинар от арт-директор Студии." }, 
+            { "title": "конкурс", "text": "Информация о гранте на обучение по курсу «Дизайн интерфейсов»" },
+        ];
+
+    .block1-events
+        each event in events
+            .block1-events-event.grid.grid__column_size_3
+                        p.block1-events-event-title= event.title
+                        p.block1-events-event-text= event.text
+                        a(href="/")
+                            svg.block1-events-event-open(width='12', height='11', viewBox='0 0 12 11', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                path(d='M1.43439 0.53186L11.0002 0.531861L11.0002 10.0976', stroke='#FF4D01', stroke-linecap='round', stroke-linejoin='round')
+                                line(x1='10.5659', y1='0.707107', x2='1.70718', y2='9.56578', stroke='#FF4D01', stroke-linecap='round', stroke-linejoin='round')
