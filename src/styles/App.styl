@@ -1,6 +1,377 @@
+// @import '../variables/variables.styl'
+@import '../blocks/header/header.styl'
+@import '../blocks/footer/footer.styl'
+@import 'media.styl'
+
 *
-  border: 1px solid red
+  margin 0
+  padding: 0
+  // border: 1px solid red
+
+body
+  background-color #DFDFDF
+  // overflow-x hidden
+
+p, a, h1, h2, h3
+  font-family Graphik LCG
+  font-style normal
+
+p
+  font-weight normal
+  font-size 21px
+  line-height 30px
+
+a
+  text-decoration none
+
+h1, h2, h3
+  font-weight 500
 
 h1
-  color: #27aedb
-  text-align: center
+  font-size 75px
+  line-height 75px
+  color #FF4D01
+  text-align center
+
+h2
+  font-size 63px
+  line-height 70px
+  color #242424
+h3
+  font-size 42px
+  line-height 50px
+  color #000000
+
+img
+  margin 45px 0 0 0
+  width 100%
+
+@media (max-width 1200px)
+  h2
+    font-size 54px
+    line-height 60px
+
+
+  h3
+    font-size 54px
+    line-height 60px
+
+
+// Common
+
+
+.circle-sub
+  font-weight 600
+  font-size 12px
+  line-height 15px
+  text-transform uppercase
+  color #FF4D01
+
+  width 139.33px
+  height 89.57px
+  left 420px
+  top 30px
+
+  border 1px solid #FF4D01
+  border-radius 110px/70px
+
+  display flex
+  align-items center
+  justify-content center
+
+.block2-description, p.block4-description
+  font-weight 500
+  font-size 19px
+  line-height 30px
+  text-transform uppercase
+  color #FF4D01
+
+.block5, .block6, .block7
+  display flex
+  align-items center
+  justify-content center
+
+.block6
+    flex-direction column
+
+// Block 1
+
+
+.block1
+  margin-top 90px
+
+  &-events
+    display flex
+    justify-content space-between
+    overflow auto
+    margin-top 58px
+
+    overflow -moz-scrollbars-none
+
+    &::-webkit-scrollbar
+      width 0
+
+    &-event
+      position relative
+      padding 0
+      color #FF4D01
+      border 1px solid #FF4D01
+      height 150px
+      min-width 260px
+      border-width 0 1px 1px 0
+
+      &:last-child
+        margin-right 0
+
+      // &:last-child:before
+      //   content ""
+      //   width 0
+      //   height 0
+      //   left 100%
+      //   top 60px
+      //   position absolute
+      //   border-top 15px solid transparent
+      //   border-left 9px solid #ff4d01
+      //   border-bottom 15px solid transparent
+
+      &-title
+        font-weight 500
+        font-size 12px
+        line-height 15px
+        text-transform uppercase
+
+      &-text
+        width 240px
+        font-weight normal
+        font-size 19px
+        line-height 30px
+
+      &-open
+        position absolute
+        top 0
+        right 20px
+
+@media (max-width 400px)
+  .block1
+    margin-top 58px
+
+
+// Block 2
+
+
+.block2
+  margin-top 175px
+  
+  &-description
+    margin-top 35px
+    margin-bottom 80px
+
+  &-elements
+
+    &-element
+      border 1px solid #FF4D01
+      border-width 1px 0 0 0
+      display flex
+
+      padding-top 33px
+      padding-bottom 37px
+
+      &-circle
+        width 60px
+        height 60px
+        border-radius 50%
+        background-color #FF4D01
+        
+        display flex
+        align-items center
+        justify-content center
+
+        font-weight 600
+        font-size 12px
+        line-height 75px
+        color #FFFFFF
+
+      &-text
+        font-weight normal
+        font-size 32px
+        line-height 40px
+
+      &-text span
+        color #FF4D01
+
+
+// Block 3
+
+
+.block3
+  margin-top 183px
+
+  &-header
+    display flex
+
+  &-open
+    font-weight 500
+    font-size 19px
+    line-height 30px
+    color #FF4D01
+    order -1
+    flex-direction column
+    margin-top 34px
+  
+  &-courses
+    margin-top 75px
+
+    &-course
+      display flex
+      width 100%
+      height 80px
+      background linear-gradient(180deg, #DFDFDF 0%, #E7E7E7 100%)
+
+      & .container
+        display flex
+        align-items center
+
+      &-icon
+        justify-content flex-start
+
+      &-title
+        font-weight normal
+        font-size 42px
+        line-height 39px
+
+      &-number
+        font-weight 500
+        font-size 19px
+        line-height 30px
+        justify-content flex-end
+
+
+// Block 4
+
+
+.block4
+  margin-top 185px
+
+  &-description
+    margin-top 35px
+    margin-bottom -9px
+
+  &-elements
+    display flex
+    justify-content flex-end
+    flex-direction column
+    align-items flex-end
+
+    &-grid
+      border 1px solid #FF4D01
+      border-width 1px 0 0 0
+      display flex
+      padding-top 14px
+      margin-bottom 50px
+
+    &-element
+
+      & p
+        font-size 19px
+        line-height 40px
+
+      &-title
+        font-weight 500
+        margin-bottom 20px
+
+      &:last-child
+        margin-right 0
+
+@media (max-width: 960px) {
+  .block4-elements-element p {
+    font-size: 14px
+    line-height: 30px
+  }
+}
+
+@media (max-width: 1200px) {
+  .block4-elements-element p {
+    font-size: 15px
+    line-height: 30px
+  }
+}
+
+// Block 5
+
+
+.block5
+  margin-top 114px
+
+  &-header
+    justify-content space-between
+
+    &-open
+      width 60px
+      height 60px
+      border-radius 50%
+      
+      display flex
+      align-items center
+      justify-content center
+      border 1px solid #FF4D01
+
+  &-description
+    margin-top 36px
+
+// Block 6
+
+
+.block6
+  margin-top 183px
+
+  &-description
+    margin-top 37px
+
+  &-form
+    margin-top 20px
+
+    & input
+      font-weight: 600
+      font-size: 12px
+      line-height: 15px
+      letter-spacing 0.03em
+      text-transform uppercase
+
+      color#FF4D01
+      background-color #DFDFDF 
+      border 1px solid #FF4D01
+      border-width 0 0 1px 0
+
+      width 100%
+      margin-bottom 31px
+      padding-bottom 16px
+
+      outline none
+
+    & input::-webkit-input-placeholder
+      color:#FF4D01
+    & input::-moz-placeholder
+      color:#FF4D01
+    & input:-moz-placeholder 
+      color:#FF4D01
+
+
+// Block 7
+
+
+.block7
+  margin-top 50px
+  margin-bottom 105px
+  align-items flex-end
+
+  &-elements
+    justify-content space-between
+    align-items flex-end
+
+    &-text
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+
+    &-text span
+      color:#FF4D01

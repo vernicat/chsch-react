@@ -1,0 +1,43 @@
+.footer
+    color #FFFFFF
+    background #FF4D01
+    padding 25px 0 37px 0
+    margin-top 15px
+
+    & a
+        color #FFFFFF
+    &-name
+        font-weight 500
+        font-size 15px
+        line-height 20px
+    &-privacy
+        display flex
+        align-items flex-end
+    &-privacy, &-social
+        font-weight 500
+        font-size 12px
+        line-height 15px
+        letter-spacing 0.03em
+        text-transform uppercase
+    &-contact, &-address
+        font-weight normal
+        font-size 15px
+        line-height 20px
+    &-social 
+        justify-content: flex-end;
+        
+        & a
+            margin-left 15px
+        & a:first-child
+            margin-left 0
+
+    &-elements:last-child
+        margin-top 10px
+
+// @media (max-width 640px)
+//     .footer
+//         display none
+
+@media (max-width 1200px)
+    .footer-elements .grid__column_size_3:nth-child(2)
+        width: 0

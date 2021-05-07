@@ -1,0 +1,18 @@
+include ../header/header
+include ../footer/footer
+
+doctype html
+html(lang="ru")
+  head
+    // Meta
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(name="format-detection" content="telephone=no")
+
+    block head
+  body
+    +header
+    main
+      block main
+    +footer

@@ -1,0 +1,108 @@
+.header
+    padding 20px 0
+
+    & .container
+        display flex
+    &-logo
+        font-weight 600
+        font-size 19px
+        line-height 30px
+        text-transform uppercase
+        color #FF4D01
+
+    &-nav
+        &-link
+            & a
+                font-weight normal
+                font-size 19px
+                line-height 30px
+                color #000000
+            &_active 
+                display flex
+                align-items center
+                justify-content space-between
+
+                & a
+                    // text-align right
+                    color #FF4D01
+                    font-size 19px
+                    line-height 30px
+                    margin-left 10px
+                    pointer-events none
+                &-line
+                    border 1px solid #FF4D01
+                    width 100%
+                    max-width 150px
+                    height 0px      
+                    border-width 1px 0 0 0
+
+
+        // &-link_active a
+            // position absolute
+            // width 180px
+            // height 0px
+            // left 720px
+            // top 95px
+
+        // &-link_active ~ .line
+        //     border 1px solid #FF4D01
+        //     border-width 0 0 0 1px
+        //     transform rotate(90deg)
+
+
+    &-menu
+        display none
+        background #FF4D01
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+        width 100%
+        padding 0 15px 0 15px
+
+        &-link
+            display none
+            font-weight 500
+            font-size 21px
+            line-height 30px
+            text-align right
+            text-transform capitalize
+            color #FF4D01
+        &-chancel
+            font-weight 500
+            font-size 21px
+            line-height 30px
+
+            float right
+            text-transform capitalize
+
+        & .header-logo,
+        & .header-nav-link,
+        & .header-nav-link_active,
+        &-chancel
+            color #FFFFFF
+
+@media (max-width 400px)
+    .header
+        padding 38px 0 7px 0
+
+        &-logo
+            float left
+        &-sub.circle-sub
+            display none
+        &-nav
+            display none
+        &-menu-link
+            display block
+            float right
+
+        // &-menu-link:focus ~ &-menu, 
+        // &-menu-link:active ~ &-menu, 
+        // &-menu:hover
+        //     display block
+
+        // &-menu-link:focus ~ body, 
+        // &-menu-link:active ~ body, 
+        // body
+        //     overflow hidden

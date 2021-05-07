@@ -1,0 +1,217 @@
+extends ../blocks/page/page
+
+include ../blocks/heading/heading
+include ../blocks/button/button
+include ../blocks/link/link
+
+block head
+  title PUG Example
+
+block main
+
+    .block1.container
+        .block1-title
+            +heading(level=1) Digital Marketing
+        img.block1-img(src="src/images/1.png")
+
+        .block1-events
+            .block1-events-event.grid.grid__column_size_3
+                p.block1-events-event-title событие
+                p.block1-events-event-text Информация о том, 
+                    br
+                    | что скоро состоится конференция.
+                a(href="/")
+                    svg.block1-events-event-open(width='12', height='11', viewBox='0 0 12 11', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M1.43439 0.53186L11.0002 0.531861L11.0002 10.0976', stroke='#FF4D01', stroke-linecap='round', stroke-linejoin='round')
+                        line(x1='10.5659', y1='0.707107', x2='1.70718', y2='9.56578', stroke='#FF4D01', stroke-linecap='round', stroke-linejoin='round')
+            .block1-events-event.grid.grid__column_size_3
+                p.block1-events-event-title курс
+                p.block1-events-event-text Скоро релиз нового курса на тему маркетинга или дизайна.
+                a(href="/")
+                    svg.block1-events-event-open(width='12', height='11', viewBox='0 0 12 11', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M1.43439 0.53186L11.0002 0.531861L11.0002 10.0976', stroke='#FF4D01', stroke-linecap='round', stroke-linejoin='round')
+                        line(x1='10.5659', y1='0.707107', x2='1.70718', y2='9.56578', stroke='#FF4D01', stroke-linecap='round', stroke-linejoin='round')
+            .block1-events-event.grid.grid__column_size_3
+                p.block1-events-event-title вебинар
+                p.block1-events-event-text Скоро состоится вебинар от арт-директора Студии.
+                a(href="/")
+                    svg.block1-events-event-open(width='12', height='11', viewBox='0 0 12 11', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M1.43439 0.53186L11.0002 0.531861L11.0002 10.0976', stroke='#FF4D01', stroke-linecap='round', stroke-linejoin='round')
+                        line(x1='10.5659', y1='0.707107', x2='1.70718', y2='9.56578', stroke='#FF4D01', stroke-linecap='round', stroke-linejoin='round')
+            .block1-events-event.grid.grid__column_size_3
+                p.block1-events-event-title конкурс
+                p.block1-events-event-text Информация о гранте на обучение по курсу «Дизайн интерфейсов»
+                a(href="/")
+                    svg.block1-events-event-open(width='12', height='11', viewBox='0 0 12 11', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M1.43439 0.53186L11.0002 0.531861L11.0002 10.0976', stroke='#FF4D01', stroke-linecap='round', stroke-linejoin='round')
+                        line(x1='10.5659', y1='0.707107', x2='1.70718', y2='9.56578', stroke='#FF4D01', stroke-linecap='round', stroke-linejoin='round')
+    
+    .block2.container
+        .block2-title
+            +heading(level=2) Chulakov School — школа 
+                br
+                | креативных навыков
+        p.block2-description Место, где практические знания 
+            br
+            | передаются студентам
+
+        .block2-elements
+            .block2-elements-element
+                .grid.grid__column_size_4
+                    p.block2-elements-element-circle A
+                .grid.grid__column_size_12
+                    p.block2-elements-element-text
+                        span Мы верим 
+                        | в силу креативных индустрий. Индустриальная эпоха уходит на второй план, и
+                        br
+                        | экономика нуждается в новых 
+                        br
+                        | специалистах.
+            .block2-elements-element
+                .grid.grid__column_size_4
+                    p.block2-elements-element-circle B
+                .grid.grid__column_size_12
+                    p.block2-elements-element-text
+                        span Наша миссия 
+                        | — дать возможность 
+                        br
+                        | талантливым людям раскрыть свой 
+                        br
+                        | потенциал и реализоваться.
+    
+    .block3
+        .block3-header.container
+            .block3-title.grid.grid__column_size_12
+                +heading(level=2) Учим тому,
+                    br
+                    | что востребовано
+
+            .block3-open.grid.grid__column_size_4
+                p Открыть все
+                svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M22 12L12.1005 21.8995L2.20101 12', stroke='#FF4D01', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+    
+        .block3-courses
+            .block3-courses-course
+                .container
+                    .block3-courses-course-icon.grid.grid__column_size_4
+                        svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+                            path(d='M22 12L12.1005 21.8995L2.20101 12', stroke='#000', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                    p.block3-courses-course-title.grid.grid__column_size_8 Design
+                    p.block3-courses-course-number.grid.grid__column_size_4 1
+            .block3-courses-course
+                .container
+                    .block3-courses-course-icon.grid.grid__column_size_4
+                        svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+                            path(d='M22 12L12.1005 21.8995L2.20101 12', stroke='#000', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                    p.block3-courses-course-title.grid.grid__column_size_8 Marketing
+                    p.block3-courses-course-number.grid.grid__column_size_4 2
+            .block3-courses-course
+                .container
+                    .block3-courses-course-icon.grid.grid__column_size_4
+                        svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+                            path(d='M22 12L12.1005 21.8995L2.20101 12', stroke='#000', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                    p.block3-courses-course-title.grid.grid__column_size_8 Management
+                    p.block3-courses-course-number.grid.grid__column_size_4 3
+            .block3-courses-course
+                .container
+                    .block3-courses-course-icon.grid.grid__column_size_4
+                        svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+                            path(d='M22 12L12.1005 21.8995L2.20101 12', stroke='#000', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                    p.block3-courses-course-title.grid.grid__column_size_8 Education
+                    p.block3-courses-course-number.grid.grid__column_size_4 4
+
+    .block4.container
+        +heading(level=2).block4-title Как устроено
+            br
+            | обучение?
+        p.block4-description Обучение недельными 
+            br
+            | спринтами
+        
+        .block4-elements
+            .block4-elements-grid.grid__column_size_6
+                .block4-elements-element.grid__column_size_3
+                    p.block4-elements-element-title Важно общаться
+                    p.block4-elements-element-text Люди учатся в ходе диалога, а не в процессе просмотра записанных видеороликов. На всех наших онлайн-курсах много живого общения, коммуникаций 
+                        br
+                        | со специалистами и одногруппниками.
+                    .block4-elements
+                .block4-elements-element.grid__column_size_3
+                    p.block4-elements-element-title Тут не все равно
+                    p.block4-elements-element-text Мы выявляем уровень знаний и желаемую цель каждого. Важен именно ваш результат. Поэтому обучение проходит 
+                        br
+                        | в небольших группах 
+                        br
+                        | и с закрепленными кураторами.
+                    .block4-elements
+            .block4-elements-grid.grid__column_size_9
+                .block4-elements-element.grid__column_size_3
+                    p.block4-elements-element-title Дрим-тим
+                    p.block4-elements-element-text Правильный наставник — залог развития. Все преподаватели школы — действующие практики 
+                        br
+                        | и лидеры 
+                        br
+                        | диджитал-индустрии. 
+                    .block4-elements
+                .block4-elements-element.grid__column_size_3
+                    p.block4-elements-element-title Практическая магия
+                    p.block4-elements-element-text Никаких иллюзий — 
+                        br
+                        | все как в жизни. Полное погружение в рабочие процессы и задания 
+                        br
+                        | по реальным кейсам крупнейших брендов.
+                    .block4-elements
+                .block4-elements-element.grid__column_size_3
+                    p.block4-elements-element-title А что дальше?
+                    p.block4-elements-element-text Наша цель — ваши успехи после обучения. Центр развития карьеры школы поможет каждому понять, как применить полученные знания с максимальным профитом.
+
+    .block5.container
+        .block5-center
+            .block5-header.grid.grid__column_size_6
+                .block5-header-title
+                    +heading(level=3) Трудо&shy;устройство 
+                        br
+                        | выпускников
+                a.block5-header-open.grid(href="/")
+                    svg(width='12', height='13', viewBox='0 0 12 13', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M1.43454 1.53186L10.9998 1.53186L10.9998 11.0972', stroke='#FF4D01', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                        line(x1='10.5652', y1='2.41421', x2='2.41406', y2='10.5653', stroke='#FF4D01', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+            p.block5-description.grid.grid__column_size_6 Нам важно, чтобы каждый студент извлек максимальную
+                //- br
+                | пользу от обучения, поэтому у нас существует центр
+                //- br
+                | развития карьеры.
+    
+    .block6.container
+        //- .block6-center
+        .block6-title.grid.grid__column_size_6
+            +heading(level=3) Найдем решение для вас
+        p.block6-description.grid.grid__column_size_6 Оставьте свои контакты, чтобы мы смогли узнать ваши цели
+            //- br
+            | и подобрать оптимальную траекторию обучения.
+
+        form.block6-form.grid.grid__column_size_6
+            input(type="text", name="name", placeholder="Имя")
+            br
+            input(type="tel", name="tel", placeholder="Телефон")
+            br
+            input(type="email", name="email", placeholder="E-mail")
+
+    .block7.container
+        //- .block7-center
+
+        .block7-elements.grid__column_size_3
+            a.block7-elements-sub.circle-sub(href="/") записаться
+        .block7-elements.grid__column_size_3
+            p.block7-elements-text Нажимая на кнопку, вы даете
+                br
+                span согласие 
+                | на обработку персональных 
+                br
+                | данных и соглашаетесь с политикой 
+                br
+                | конфиденциальности.
+    
+
+    //- #root
