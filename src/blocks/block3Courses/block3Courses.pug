@@ -5,9 +5,9 @@ mixin block3Courses()
     .block3-courses
         each cource_name, index in courses
             .block3-courses-course
-                .container
-                    .block3-courses-course-icon.grid.grid__column_size_4
-                        svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
+                .container.grid
+                    .block3-courses-course-icon.grid__column_size_4
+                        svg.svg-color(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
                             path(d='M22 12L12.1005 21.8995L2.20101 12', stroke='#000', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
-                    p.block3-courses-course-title.grid.grid__column_size_8= cource_name
-                    p.block3-courses-course-number.grid.grid__column_size_4= index+1
+                    p.block3-courses-course-title.grid__column_size_8= cource_name
+                    p.block3-courses-course-number.grid__column_size_4= index+1

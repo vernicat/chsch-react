@@ -1,11 +1,11 @@
-// @import '../variables/variables.styl'
+@import '../variables/variables.styl'
 @import '../blocks/base/header/header.styl'
 @import '../blocks/base/footer/footer.styl'
-@import 'media.styl'
+@import 'container.styl'
 
 *
   margin 0
-  padding: 0
+  padding 0
   // border: 1px solid red
 
 body
@@ -16,9 +16,9 @@ p, a, h1, h2, h3
   font-family Graphik LCG
   font-style normal
 
-p
+p, a
   font-weight normal
-  font-size 21px
+  font-size 19px
   line-height 30px
 
 a
@@ -30,8 +30,9 @@ h1, h2, h3
 h1
   font-size 75px
   line-height 75px
-  color #FF4D01
+  color primary
   text-align center
+  letter-spacing -0.01em
 
 h2
   font-size 63px
@@ -46,45 +47,82 @@ img
   margin 45px 0 0 0
   width 100%
 
-@media (max-width 1200px)
+@media (max-width: 1200px)
+  p, a
+    font-size 15px
+    line-height 30px
   h2
-    font-size 54px
-    line-height 60px
-
-
+    font-size 45px
+    line-height 50px
   h3
-    font-size 54px
-    line-height 60px
+    font-size 32px
+    line-height 40px
+
+@media (max-width: 960px)
+  p, a
+    font-size 14px
+    line-height 20px
+  h1
+    font-size 42px
+    line-height 45px
+  h2
+    font-size 29px
+    line-height 30px
+  h3
+    font-size 19px
+    line-height 20px
 
 
 // Common
 
+
+.svg-color
+  filter primaryFilter
+
+.circle
+  width 80px
+  height 80px
+  border-radius 50%
+
+  display flex
+  align-items center
+  justify-content center
+  border 1px solid primary
 
 .circle-sub
   font-weight 600
   font-size 12px
   line-height 15px
   text-transform uppercase
-  color #FF4D01
+  color primary
 
   width 139.33px
   height 89.57px
   left 420px
   top 30px
 
-  border 1px solid #FF4D01
+  border 1px solid primary
   border-radius 110px/70px
 
   display flex
   align-items center
   justify-content center
 
+@media (max-width: 1200px)
+  .circle
+    width 70px
+    height 70px
+
+@media (max-width: 960px)
+  .circle
+    width 50px
+    height 50px
+
+
 .block2-description, p.block4-description
   font-weight 500
-  font-size 19px
-  line-height 30px
   text-transform uppercase
-  color #FF4D01
+  color primary
 
 .block5, .block6, .block7
   display flex
@@ -92,7 +130,7 @@ img
   justify-content center
 
 .block5, .block6
-    flex-direction column
+  flex-direction column
 
 
 // Block 1
@@ -100,12 +138,14 @@ img
 
 .block1
   margin-top 90px
+  display: flex;
+  flex-direction: column;
 
   &-events
     display flex
     justify-content space-between
     overflow auto
-    margin-top 58px
+    margin-top 60px
 
     overflow -moz-scrollbars-none
 
@@ -115,11 +155,11 @@ img
     &-event
       position relative
       padding 0
-      color #FF4D01
-      border 1px solid #FF4D01
-      height 150px
+      color primary
+      border 1px solid primary
       min-width 260px
       border-width 0 1px 1px 0
+      margin-top: 2px;
 
       &:last-child
         margin-right 0
@@ -132,7 +172,7 @@ img
       //   top 60px
       //   position absolute
       //   border-top 15px solid transparent
-      //   border-left 9px solid #ff4d01
+      //   border-left 9px solid primary
       //   border-bottom 15px solid transparent
 
       &-title
@@ -140,22 +180,17 @@ img
         font-size 12px
         line-height 15px
         text-transform uppercase
+        margin-top -2px
 
       &-text
         width 240px
-        font-weight normal
-        font-size 19px
-        line-height 30px
+        margin-top 26px
+        margin-bottom 21px
 
       &-open
         position absolute
         top 0
         right 20px
-
-@media (max-width 400px)
-  .block1
-    margin-top 58px
-
 
 // Block 2
 
@@ -170,7 +205,7 @@ img
   &-elements
 
     &-element
-      border 1px solid #FF4D01
+      border 1px solid primary
       border-width 1px 0 0 0
       display flex
 
@@ -178,14 +213,7 @@ img
       padding-bottom 37px
 
       &-circle
-        width 60px
-        height 60px
-        border-radius 50%
-        background-color #FF4D01
-        
-        display flex
-        align-items center
-        justify-content center
+        background-color primary
 
         font-weight 600
         font-size 12px
@@ -193,12 +221,11 @@ img
         color #FFFFFF
 
       &-text
-        font-weight normal
-        font-size 32px
-        line-height 40px
+        font-size 41px
+        line-height 50px
 
       &-text span
-        color #FF4D01
+        color primary
 
 
 // Block 3
@@ -207,15 +234,16 @@ img
 .block3
   margin-top 183px
 
+  & svg
+    height 14px
+    width 14px
+
   &-header
     display flex
 
   &-open
     font-weight 500
-    font-size 19px
-    line-height 30px
-    color #FF4D01
-    order -1
+    color primary
     flex-direction column
     margin-top 34px
   
@@ -241,9 +269,8 @@ img
         line-height 39px
 
       &-number
+        display flex
         font-weight 500
-        font-size 19px
-        line-height 30px
         justify-content flex-end
 
 
@@ -255,47 +282,39 @@ img
 
   &-description
     margin-top 35px
-    margin-bottom -9px
 
   &-elements
     display flex
     justify-content flex-end
     flex-direction column
     align-items flex-end
+    margin-top -9px
 
     &-grid
-      border 1px solid #FF4D01
+      border 1px solid primary
       border-width 1px 0 0 0
       display flex
       padding-top 14px
       margin-bottom 50px
 
     &-element
-
-      & p
-        font-size 19px
-        line-height 40px
-
       &-title
         font-weight 500
-        margin-bottom 20px
+        line-height 40px
+        margin-bottom 10px
 
       &:last-child
         margin-right 0
 
-@media (max-width: 960px) {
-  .block4-elements-element p {
-    font-size: 14px
-    line-height: 30px
-  }
-}
+// @media (max-width: 960px)
+//   .block4-elements-element p
+//     font-size: 14px
 
-@media (max-width: 1200px) {
-  .block4-elements-element p {
-    font-size: 15px
-    line-height: 30px
-  }
-}
+// @media (max-width: 1200px)
+//   .block4-elements-element p
+//     font-size: 15px
+//     line-height 20px
+
 
 // Block 5
 
@@ -304,17 +323,8 @@ img
   margin-top 114px
 
   &-header
+    display flex
     justify-content space-between
-
-    &-open
-      width 60px
-      height 60px
-      border-radius 50%
-      
-      display flex
-      align-items center
-      justify-content center
-      border 1px solid #FF4D01
 
   &-description
     margin-top 36px
@@ -338,9 +348,9 @@ img
       letter-spacing 0.03em
       text-transform uppercase
 
-      color#FF4D01
+      color primary
       background-color #DFDFDF 
-      border 1px solid #FF4D01
+      border 1px solid primary
       border-width 0 0 1px 0
 
       width 100%
@@ -350,11 +360,11 @@ img
       outline none
 
     & input::-webkit-input-placeholder
-      color:#FF4D01
+      color:primary
     & input::-moz-placeholder
-      color:#FF4D01
+      color:primary
     & input:-moz-placeholder 
-      color:#FF4D01
+      color:primary
 
 
 // Block 7
@@ -375,4 +385,131 @@ img
       line-height: 15px
 
     &-text span
-      color:#FF4D01
+      color:primary
+
+
+@media (max-width: 1200px)
+  .block1
+    margin-top 81px
+
+    &-img
+      margin-top 29px
+
+    &-events
+      margin-top 40px
+
+      &-event
+        &-title
+          font-size 9px
+          line-height 12px
+        &-text
+          margin-top 15px
+          margin-bottom 15px
+    
+  .block2
+    margin-top 111px
+
+    &-description
+      font-size: 15px;
+      line-height: 20px;
+
+    &-elements
+      &-element
+        &-text
+          font-size: 32px;
+          line-height: 40px;
+
+  .block3
+    margin-top 121px
+
+    & svg
+      height 9.33px
+      width 9.33px
+
+    &-courses
+      margin-top 50px
+
+      &-course
+        // &-icon  
+
+        &-title
+          font-size: 32px;
+          line-height: 40px;
+
+        &-number
+          font-size: 15px;
+          line-height: 20px;
+          
+  .block4
+    margin-top 90.56px
+  .block5
+    margin-top 65px
+  .block6
+    margin-top 135px
+  .block7
+    margin-top 40px
+
+@media (max-width: 960px)
+  .block1
+    margin-top 34px
+    
+    &-img
+        margin-top 26px
+
+    &-events
+      margin-top 30px
+
+      &-event
+        &-text
+          margin-top 16px
+          margin-bottom 14px
+
+  .block2
+    margin-top 57px
+
+    &-description
+      font-size: 14px;
+      line-height: 20px;
+
+    &-elements
+      &-element
+        &-text
+          font-size: 19px;
+          line-height: 30px;
+
+  .block3
+    margin-top 97px
+
+    &-open
+      margin-top 10px
+
+    &-courses
+      margin-top 33px
+      
+      &-course
+        // &-icon  
+
+        &-title
+          font-size: 19px;
+          line-height: 20px;
+
+        &-number
+          font-size: 9px;
+          line-height: 12px;
+  .block4
+    margin-top 106px
+  .block5
+    margin-top 34px
+  .block6
+    margin-top 109px
+  .block7
+    margin-top 39px
+  .block5 .grid__column_size_6,
+  .block6 .grid__column_size_6,
+  .block7 .grid__column_size_6
+    width 352px
+  
+  .block5 .grid__column_size_3,
+  .block6 .grid__column_size_3,
+  .block7 .grid__column_size_3
+    width 160px

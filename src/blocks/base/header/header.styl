@@ -8,29 +8,24 @@
         font-size 19px
         line-height 30px
         text-transform uppercase
-        color #FF4D01
+        color primary
 
     &-nav
         &-link
             & a
-                font-weight normal
-                font-size 19px
-                line-height 30px
                 color #000000
             &_active 
                 display flex
                 align-items center
-                justify-content space-between
+                justify-content flex-start
 
                 & a
                     // text-align right
-                    color #FF4D01
-                    font-size 19px
-                    line-height 30px
+                    color primary
                     margin-left 10px
                     pointer-events none
                 &-line
-                    border 1px solid #FF4D01
+                    border 1px solid primary
                     width 100%
                     max-width 150px
                     height 0px      
@@ -45,14 +40,14 @@
             // top 95px
 
         // &-link_active ~ .line
-        //     border 1px solid #FF4D01
+        //     border 1px solid primary
         //     border-width 0 0 0 1px
         //     transform rotate(90deg)
 
 
     &-menu
         display none
-        background #FF4D01
+        background primary
         position absolute
         top 0
         bottom 0
@@ -68,13 +63,12 @@
             line-height 30px
             text-align right
             text-transform capitalize
-            color #FF4D01
+            color primary
         &-chancel
             font-weight 500
             font-size 21px
             line-height 30px
 
-            float right
             text-transform capitalize
 
         & .header-logo,
@@ -83,19 +77,16 @@
         &-chancel
             color #FFFFFF
 
-@media (max-width 400px)
+@media (max-width 640px)
     .header
         padding 38px 0 7px 0
 
-        &-logo
-            float left
         &-sub.circle-sub
             display none
         &-nav
             display none
         &-menu-link
             display block
-            float right
 
         // &-menu-link:focus ~ &-menu, 
         // &-menu-link:active ~ &-menu, 
