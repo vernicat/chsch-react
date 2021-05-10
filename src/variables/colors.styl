@@ -1,0 +1,5 @@
+$colors = json('colors.json')
+
+for $name, $color in $colors {
+  define('$' + $name + 'Color', $color)
+}
