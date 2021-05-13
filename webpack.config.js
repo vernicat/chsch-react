@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -19,7 +19,12 @@ module.exports = {
           },
         }
       },
-      { 
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
+      {
         test: /\.pug$/,
         use: ['pug-loader']
       },
@@ -56,5 +61,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/index.pug"
     })
-  ]
+  ],
+  devServer: {
+    historyApiFallback: true
+  },
 };
