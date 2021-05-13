@@ -12,70 +12,38 @@
 
     &-nav
         &-link
+            &
+            &_active
+                padding 5px 0
+
             & a
-                color #000000
-            &_active 
+                color tertiaryColor
+            &_active
                 display flex
                 align-items center
                 justify-content flex-start
 
                 & a
-                    // text-align right
                     color primary
                     margin-left 10px
-                    pointer-events none
+                    white-space: nowrap
                 &-line
                     border 1px solid primary
                     width 100%
                     max-width 150px
-                    height 0px      
+                    height 0px
                     border-width 1px 0 0 0
-
-
-        // &-link_active a
-            // position absolute
-            // width 180px
-            // height 0px
-            // left 720px
-            // top 95px
-
-        // &-link_active ~ .line
-        //     border 1px solid primary
-        //     border-width 0 0 0 1px
-        //     transform rotate(90deg)
-
-
-    &-menu
+    &-menu-link
         display none
-        background primary
-        position absolute
-        top 0
-        bottom 0
-        left 0
-        right 0
-        width 100%
-        padding 0 15px 0 15px
 
-        &-link
-            display none
-            font-weight 500
-            font-size 21px
-            line-height 30px
-            text-align right
-            text-transform capitalize
-            color primary
-        &-chancel
-            font-weight 500
-            font-size 21px
-            line-height 30px
+.menu
+    display none
 
-            text-transform capitalize
-
-        & .header-logo,
-        & .header-nav-link,
-        & .header-nav-link_active,
-        &-chancel
-            color #FFFFFF
+@media (min-width 641px)
+    body
+        overflow auto !important
+    .menu
+        display none !important
 
 @media (max-width 640px)
     .header
@@ -87,13 +55,108 @@
             display none
         &-menu-link
             display block
+            color primary
+            font-weight 500
+            font-size 21px
+            line-height 30px
 
-        // &-menu-link:focus ~ &-menu, 
-        // &-menu-link:active ~ &-menu, 
-        // &-menu:hover
-        //     display block
 
-        // &-menu-link:focus ~ body, 
-        // &-menu-link:active ~ body, 
-        // body
-        //     overflow hidden
+    .menu
+        display none
+        background primary
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+        z-index 999
+        overflow auto
+
+        & .container
+            display flex
+            flex-direction column
+            justify-content space-between
+            height 100%
+            max-height 812px
+
+        &-header
+            &-top
+                display flex
+                justify-content space-between
+
+            &-close
+                font-weight 500
+                font-size 21px
+                line-height 30px
+
+                text-transform capitalize
+
+        & .header-nav
+            display block
+            margin-top 40px
+
+            &-link
+                &
+                &_active
+                    padding 0
+
+                & a
+                &_active a
+                    display block
+                    font-weight 500
+                    font-size 42px
+                    line-height 75px
+                    letter-spacing -0.01em
+                    padding 5px 0 10px 0
+                    border-bottom 1px solid #FFFFFF
+                    margin 0
+                    width 100%
+                    pointer-events: auto
+
+                &_active-line
+                    display none
+
+                &:nth-child(4) a
+                &_active:nth-child(4) a
+                    border-bottom 0
+
+
+        & .header-logo
+        & .menu-header-close
+        & .header-nav-link a
+        & .header-nav-link_active a
+            color #FFFFFF
+
+        & .footer
+            display block
+            height 100%
+            padding 0
+            margin 0
+
+            & p, a
+                font-size 12px
+                line-height 30px
+                text-transform uppercase
+
+            & .grid
+                flex-direction column
+                height 100%
+                justify-content space-between
+                padding-bottom 38px
+                box-sizing border-box
+
+                & .grid__column_size_4
+                    &:nth-child(2)
+                        width 100%
+                    &:nth-child(3)
+                        margin-top 15px
+
+                & .footer-address
+                    line-height 15px
+
+                & .footer-privacy
+                    margin-top 20px
+
+                & .footer-social
+                    margin-top 80px
+                    justify-content space-around

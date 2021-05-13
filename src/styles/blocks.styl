@@ -1,0 +1,460 @@
+// Block 1
+
+.block1
+    margin-top 90px
+    display flex
+    flex-direction column
+
+    &-img
+        margin-top 45px
+
+    &-events
+        display flex
+        justify-content space-between
+        overflow auto
+        margin-top 60px
+
+        overflow -moz-scrollbars-none
+
+        &::-webkit-scrollbar
+            width 0
+
+        &-event
+            position relative
+            padding 0
+            color primary
+            border 1px solid primary
+            min-width 265px
+            border-width 0 1px 1px 0
+            margin-top 2px
+
+            &:last-child
+                margin-right 0
+
+            &-title
+                font-weight 500
+                font-size 12px
+                line-height 15px
+                text-transform uppercase
+                margin-top -2px
+
+            &-text
+                max-width 240px
+                margin-top 26px
+                margin-bottom 21px
+
+            &-open
+                position absolute
+                top 0
+                right 20px
+                height: 9.57px
+                width: 9.57px
+
+
+// Block 2
+
+.block2
+    margin-top 175px
+
+    &-description
+        margin-bottom 80px
+
+    &-elements
+        &-element
+            border 1px solid primary
+            border-width 1px 0 0 0
+            display flex
+
+            padding-top 33px
+            padding-bottom 37px
+
+            &-circle
+                background-color primary
+                font-weight 600
+                font-size 12px
+                line-height 75px
+                color #FFFFFF
+
+            &-text
+                font-size 41px
+                line-height 50px
+
+            &-text span
+                color primary
+
+
+// Block 3
+
+.block3
+    margin-top 183px
+
+    &-header
+        &-open
+            display flex
+            flex-direction column
+            font-weight 500
+            color primary
+            flex-direction column
+            margin-top 34px
+
+            & svg
+                height 14px
+                width 14px
+
+    &-courses
+        margin-top 75px
+
+        &-course
+            display flex
+            width 100%
+            height 80px
+            background linear-gradient(180deg, backgroundColor 0%, #E7E7E7 100%)
+
+            & .container
+                display flex
+                align-items center
+
+            &-icon
+                justify-content flex-start
+
+            &-title
+                font-weight normal
+                font-size 42px
+                line-height 39px
+
+            &-number
+                display flex
+                font-weight 500
+                justify-content flex-end
+
+
+// Block 4
+
+.block4
+    margin-top 185px
+
+    &-elements
+        display flex
+        justify-content flex-end
+        flex-direction column
+        align-items flex-end
+        margin-top -9px
+
+        &-element
+            &-title
+                font-weight 500
+                line-height 45px
+                margin-bottom 10px
+
+            &:last-child
+                margin-right 0
+
+        &-grid
+            border 1px solid primary
+            border-width 1px 0 0 0
+            display flex
+            padding-top 14px
+            margin-bottom 50px
+
+
+// Block 5
+
+.block5
+    margin-top 114px
+
+    &-header
+        display flex
+        justify-content space-between
+
+        &-open
+            margin-top 31px
+
+
+// Block 6
+
+.block6
+    margin-top 183px
+
+    &-description
+        margin-top 37px
+
+    &-form
+        margin-top 20px
+
+        & input
+            font-weight 600
+            font-size 12px
+            line-height 15px
+            letter-spacing 0.03em
+            text-transform uppercase
+
+            color primary
+            background-color backgroundColor
+            border 1px solid primary
+            border-width 0 0 1px 0
+
+            width 100%
+            margin-bottom 31px
+            padding-bottom 16px
+
+            outline none
+
+        & input::-webkit-input-placeholder
+            color:primary
+        & input::-moz-placeholder
+            color:primary
+        & input:-moz-placeholder
+            color:primary
+
+
+// Block 7
+
+.block7
+    margin-top 50px
+    margin-bottom 105px
+    align-items flex-end
+
+    &-elements
+        justify-content space-between
+        align-items flex-end
+
+        &-text
+            font-weight normal
+            font-size 12px
+            line-height 15px
+
+            & span
+                color:primary
+
+
+.block2-description
+.block4-description
+.block5-description
+    margin-top 35px
+
+.block2-description
+.block4-description
+    font-weight 500
+    text-transform uppercase
+    color primary
+
+.block5
+.block6
+.block7
+    display flex
+    align-items center
+    justify-content center
+
+.block5
+.block6
+    flex-direction column
+
+.block-sub
+    display none
+
+@media (max-width 1200px)
+    .block1
+        margin-top 81px
+
+        &-img
+            margin-top 29px
+
+        &-events
+            margin-top 40px
+
+            &-event
+                &-title
+                    font-size 9px
+                    line-height 12px
+                &-text
+                    margin-top 15px
+                    margin-bottom 15px
+
+    .block2
+        margin-top 111px
+
+        &-elements
+            &-element
+                &-text
+                    font-size 32px
+                    line-height 40px
+
+    .block3
+        margin-top 101px
+
+        & svg
+            height 9.33px
+            width 9.33px
+
+        &-courses
+            margin-top 50px
+
+            &-course
+                &-title
+                    font-size 32px
+                    line-height 40px
+
+                &-number
+                    font-size 15px
+                    line-height 20px
+
+    .block4
+        margin-top 90.56px
+    .block5
+        margin-top 65px
+    .block6
+        margin-top 135px
+    .block7
+        margin-top 40px
+
+
+@media (max-width 960px)
+    .block1
+        margin-top 34px
+
+        &-img
+            margin-top 26px
+
+        &-events
+            margin-top 30px
+
+            &-event
+                // min-width 210px
+                min-width 196px
+
+                &-text
+                    margin-top 16px
+                    margin-bottom 14px
+                    max-width 180px
+
+    .block2
+        margin-top 57px
+
+        &-description
+            font-size 14px
+            line-height 20px
+
+        &-elements
+            &-element
+                &-text
+                    font-size 19px
+                    line-height 30px
+
+    .block3
+        margin-top 54px
+
+        &-header
+            &-open
+                margin-top 10px
+
+        &-courses
+            margin-top 33px
+
+            &-course
+                &-title
+                    font-size 19px
+                    line-height 20px
+
+                &-number
+                    font-size 9px
+                    line-height 12px
+
+    .block4
+        margin-top 106px
+    .block5
+        margin-top 34px
+    .block6
+        margin-top 109px
+    .block7
+        margin-top 39px
+
+@media (max-width 640px)
+    .block1
+        margin-top 58px
+
+        &-img
+            width 100%
+
+        &-events
+            &-event
+                min-width 300px
+
+                &-title
+                    font-size 12px
+                    line-height 15px
+
+                &-text
+                    max-width 285px
+
+    .block2
+        margin-top 13px
+
+        &-description
+            margin-bottom 32px
+
+        &-elements
+            &-element
+                border 0
+                flex-direction column
+                padding-top 10.5px
+                padding-bottom 10.5px
+
+                &-text
+                    margin-top 9px
+
+    .block3
+        &-header
+            flex-direction column-reverse
+
+        &-courses
+            &-course
+                &-title
+                    font-weight 500
+                    text-transform uppercase
+
+                &-number
+                    font-weight 500
+                    font-size 12px
+                    line-height 15px
+
+    .block4
+        &-elements
+            display block
+
+            &-element
+                &-title
+                    margin-top 20px
+
+            &-grid
+                margin-bottom 0
+
+                &.grid__column_size_6
+                &.grid__column_size_9
+                    border 0
+                    flex-direction column
+                    width 100%
+                    padding 0
+
+    .block5
+        &-header
+            display flex
+            flex-direction column
+
+    .block7
+        flex-direction row-reverse
+        margin-top 30px
+        margin-bottom 15px
+
+        & .grid__column_size_3:first-child
+            display flex
+            justify-content flex-end
+
+    .block2-description
+    .block4-description
+        font-size 21px
+        line-height 30px
+
+    .block-sub
+        display flex
+        justify-content flex-end
+        margin-top 20px
