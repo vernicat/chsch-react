@@ -10,7 +10,7 @@ const Footer = () => {
         .grid
           .grid__column_size_4
             p.footer-name Chulakov School
-            a.footer-privacy Правовая информация
+            a.footer-privacy(href="/") Правовая информация
 
           .grid__column_size_4
 

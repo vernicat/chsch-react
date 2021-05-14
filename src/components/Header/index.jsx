@@ -78,7 +78,7 @@ const Header = () => {
                                     br
                                     | Кировский пр-т, д. 122, 3-й эт.
 
-                                a.footer-privacy Правовая информация
+                                a.footer-privacy(href="/") Правовая информация
 
 
                         .grid__column_size_4
